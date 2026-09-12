@@ -4,6 +4,8 @@
 
 회원 카페: [$TESLA 오너스](https://cafe.naver.com/teslastocklife)
 
+공개 사이트: [테슬라 광주·전남 오너 정보방](https://1show-design.github.io/tesla-gwangju-jeonnam-info/)
+
 ## 공개 원칙
 
 - 현재 운영원칙 시행일: 2026-09-13

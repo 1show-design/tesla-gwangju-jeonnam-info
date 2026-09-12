@@ -23,7 +23,7 @@ const notice = `[테슬라 광주·전남 오너 정보방 운영원칙 안내]
 새 정보: TePilot 주행기록과 구글 시트를 활용한 장거리 수퍼차저 경로 설계 안내를 정보실에 추가했습니다. 개인 주소·좌표·API 키는 공개하지 않습니다.
 
 전체 운영원칙과 회원 정보
-https://1show-design.github.io/tesla-jeonnam-info/`;
+https://1show-design.github.io/tesla-gwangju-jeonnam-info/`;
 
 const toast = document.querySelector("#toast");
 let toastTimer;
