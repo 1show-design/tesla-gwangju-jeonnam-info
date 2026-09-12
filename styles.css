@@ -116,18 +116,6 @@ details[open] summary::after { content: "−"; }
 .process-list p { margin: 0; color: var(--muted); }
 .exception { margin: 1.3rem 0 0; border-left: 4px solid var(--red); padding: .8rem 1rem; background: white; }
 
-.archive-section { background: white; }
-.archive-intro { max-width: 760px; color: var(--muted); margin: -1rem 0 3rem 3.3rem; }
-.timeline { margin-left: 3.3rem; border-left: 1px solid var(--line); }
-.timeline article { position: relative; padding: 0 0 3.5rem 2rem; max-width: 760px; }
-.timeline article::before { content: ""; position: absolute; left: -6px; top: .5rem; width: 11px; height: 11px; background: var(--red); transform: rotate(45deg); }
-.timeline time { font: 700 .85rem Georgia, serif; color: var(--red); }
-.timeline h3 { margin: .4rem 0 .45rem; font-size: 1.45rem; letter-spacing: -.02em; }
-.timeline p { margin: 0 0 .7rem; color: #555; }
-.tag { display: inline-block; padding: .22rem .5rem; border: 1px solid var(--line); font-size: .72rem; font-weight: 800; color: #666; }
-.privacy-box { max-width: 830px; margin-left: 3.3rem; padding: 1.4rem; background: var(--paper); border-top: 3px solid var(--ink); }
-.privacy-box p { margin: .35rem 0 0; color: #555; }
-
 .final-note { display: grid; grid-template-columns: 1.5fr .7fr; align-items: end; gap: 3rem; background: var(--red); color: white; }
 .final-note .kicker { color: white; opacity: .8; }
 .final-note p:last-child { margin: 0; border-top: 1px solid rgba(255,255,255,.6); padding-top: 1rem; }
@@ -168,7 +156,6 @@ footer p { margin: 0; }
   .rule-card { min-height: 210px; }
   .section-heading { gap: .8rem; }
   .detail-body { padding-left: 2.1rem; }
-  .archive-intro, .timeline, .privacy-box { margin-left: 0; }
   footer { flex-direction: column; gap: .4rem; }
 }
 
