@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="TePilot 주행기록과 구글 시트를 활용한 테슬라 장거리 경로 설계 안내">
+  <title>주행기록으로 장거리 경로 설계하기 · 테슬라 광주·전남</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111'/%3E%3Cpath d='M35 7 17 36h13l-2 21 19-31H34z' fill='%23e82127'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="guide-page">
+  <a class="skip-link" href="#guide-main">본문으로 바로가기</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="테슬라 광주·전남 정보실로 돌아가기"><span class="brand-mark" aria-hidden="true">J</span><span>GWANGJU · JEONNAM OWNERS</span></a>
+    <nav aria-label="안내서 메뉴"><a href="#method">계산 방법</a><a href="#route">경로 설계</a><a href="#privacy">공유 전 확인</a></nav>
+  </header>
+
+  <main class="guide-main" id="guide-main">
+    <section class="guide-hero">
+      <a class="guide-back" href="index.html#drivelog">← 정보실로 돌아가기</a>
+      <p class="eyebrow"><span></span> 회원 실측 자료 · 2026. 09. 13.</p>
+      <h1>주행기록으로<br><em>장거리 경로 설계하기</em></h1>
+      <p>TePilot의 주행기록을 구글 시트에 쌓고, 내 차의 실제 사용 가능 용량과 주행 조건별 전비를 계산해 수퍼차저 경유 계획에 반영하는 방법입니다.</p>
+      <div class="guide-metrics" aria-label="실측 사례 요약">
+        <div><strong>13개</strong><span>70km 이상 구간 분석</span></div>
+        <div><strong>58kWh</strong><span>최근 기록 기준 참고값</span></div>
+        <div><strong>15%p</strong><span>계획에 더할 권장 여유분</span></div>
+      </div>
+    </section>
+
+    <section class="guide-section" id="method">
+      <p class="kicker">기록에서 기준값까지</p>
+      <h2>감이 아니라 내 차의 숫자로 계산합니다</h2>
+      <p class="guide-lead">차량에 표시되는 예상 주행거리나 카탈로그 용량만 보지 않고, 실제 장거리 주행에서 사용한 전력량과 배터리 감소율을 함께 봅니다. 여러 구간이 비슷한 값으로 모일 때 그 값을 현재 차량의 보수적인 기준으로 사용합니다.</p>
+      <div class="guide-flow">
+        <article class="guide-step"><span>01</span><h3>TePilot 기록</h3><p>거리, 시간, 사용 전력량, 시작·종료 배터리를 자동 차계부에 쌓습니다.</p></article>
+        <article class="guide-step"><span>02</span><h3>History 시트만 사용</h3><p>구글 시트의 주행기록에서 70km 이상이며 중간 충전이 없는 구간을 고릅니다.</p></article>
+        <article class="guide-step"><span>03</span><h3>실제 용량 계산</h3><p>각 구간의 사용 전력량을 배터리 감소 비율로 나눠 100% 환산값을 구합니다.</p></article>
+        <article class="guide-step"><span>04</span><h3>경로에 적용</h3><p>용량, 전비, 거리와 여유분을 이용해 수퍼차저 도달 가능성을 확인합니다.</p></article>
+      </div>
+      <div class="formula-box">
+        <code>환산 100% 용량(kWh) = 사용 전력량(kWh) ÷ (배터리 감소율 ÷ 100)</code>
+        <p>예: 49.5kWh를 쓰며 배터리가 85% 감소했다면 49.5 ÷ 0.85 = 약 58.2kWh입니다.</p>
+      </div>
+      <p class="guide-disclaimer"><strong>앱 연동 안내:</strong> TePilot의 메뉴 구성은 버전에 따라 달라질 수 있습니다. 최신 앱에서 구글 시트 연동을 설정하고, 연결 뒤 드라이브에 생성된 History 시트에 주행 종료 기록이 들어오는지 먼저 확인해 주세요. 정확한 메뉴 이름은 앱의 최신 안내를 따릅니다.</p>
+    </section>
+
+    <section class="guide-section">
+      <p class="kicker">익명화한 회원 사례</p>
+      <h2>숫자는 참고하고, 계산법은 각자의 차에 적용하세요</h2>
+      <p class="guide-lead">한 차량의 장거리 구간 13개를 분석한 결과입니다. 최근 기록은 약 58kWh 부근으로 모였고, 가장 긴 무정차 구간의 환산값은 58.2kWh였습니다. 차종·연식·기온·타이어·주행 습관에 따라 결과가 달라집니다.</p>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <thead><tr><th>확인 항목</th><th>실측 사례</th><th>활용</th></tr></thead>
+          <tbody>
+            <tr><td>최근 사용 가능 용량</td><td><strong>약 58kWh</strong></td><td>도달 가능 거리 계산의 보수적 기준</td></tr>
+            <tr><td>고속 주행 전비</td><td><strong>5.4~6.0km/kWh</strong></td><td>고속도로 구간의 예상 소모량 계산</td></tr>
+            <tr><td>정체 구간 전비</td><td><strong>7.2~7.5km/kWh</strong></td><td>시간은 늘어도 배터리 소모는 상대적으로 적을 수 있음</td></tr>
+            <tr><td>전비 6.0 기준 소모</td><td><strong>100km당 약 29%</strong></td><td>거리별 필요 배터리의 빠른 추정</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="guide-section" id="route">
+      <p class="kicker">수퍼차저 경유 설계</p>
+      <h2>충전소를 먼저 정하고 경로를 맞춥니다</h2>
+      <ol class="check-list">
+        <li><div><strong>차량 내비게이션과 Tesla 앱에서 수퍼차저를 확인합니다.</strong><span>차량의 트립 플래너가 제안하는 충전 지점과 필요 충전량을 우선 참고하세요.</span></div></li>
+        <li><div><strong>다음 충전소까지 필요한 배터리를 계산합니다.</strong><span>구간 거리 ÷ 100 × 100km당 소모율에 약 15%p의 여유를 더합니다.</span></div></li>
+        <li><div><strong>목적지 근처에서 충전 가능한지 먼저 확인합니다.</strong><span>귀가 전 충전이 어렵다면 중간 수퍼차저와 충전 시간을 처음부터 일정에 넣습니다.</span></div></li>
+        <li><div><strong>80% 이후 충전은 필요할 때만 선택합니다.</strong><span>공식 안내처럼 배터리 잔량이 높아질수록 충전 속도가 느려집니다. 다음 구간에 충분하다면 짧게 나눠 충전하는 편이 효율적일 수 있습니다.</span></div></li>
+        <li><div><strong>화장실·식사 정차를 충전과 겹칩니다.</strong><span>휴식이 필요한 지점을 충전소로 정하면 전체 이동 시간을 줄이기 쉽습니다.</span></div></li>
+      </ol>
+    </section>
+
+    <section class="guide-section privacy-callout" id="privacy">
+      <p class="kicker">공개 전 필수 점검</p>
+      <h2>Settings 시트는 공유하지 마세요</h2>
+      <p class="guide-lead">설정 시트에는 API 키, 집·회사 주소와 좌표가 평문으로 들어갈 수 있습니다. 단톡방·카페·블로그·깃허브에는 History 시트도 원본 그대로 올리지 말고 필요한 집계값만 공개하세요.</p>
+      <div class="privacy-grid">
+        <div><strong>API 키</strong><span>노출됐다면 즉시 폐기하고 새로 발급</span></div>
+        <div><strong>집·회사 주소와 GPS 좌표</strong><span>삭제하거나 알아볼 수 없게 변경</span></div>
+        <div><strong>출발지·도착지와 차량 식별정보</strong><span>삭제 또는 가명 처리</span></div>
+        <div><strong>이동 경로 데이터</strong><span>복원 가능한 궤적 열은 공유 대상에서 제외</span></div>
+      </div>
+    </section>
+
+    <section class="guide-section">
+      <p class="kicker">출처와 이용 기준</p>
+      <h2>공식 안내와 실제 차량 상태를 함께 확인하세요</h2>
+      <ul class="source-list">
+        <li><a href="https://tepilot.weekendproject.net/" target="_blank" rel="noopener noreferrer">TePilot 공식 소개</a> — 자동 차계부 등 앱 기능 확인</li>
+        <li><a href="https://www.tesla.com/ko_kr/support/charging/supercharging" target="_blank" rel="noopener noreferrer">Tesla 수퍼차저 공식 지원</a> — 트립 플래너, 충전 한도와 충전 속도 안내</li>
+      </ul>
+      <p class="guide-disclaimer">이 자료는 특정 차량 한 대의 실측 사례를 바탕으로 정리한 비공식 참고자료입니다. 표시된 58kWh와 전비 범위를 다른 차량에 그대로 적용하지 말고, 실제 차량의 내비게이션 안내·배터리 상태·날씨·도로 상황을 우선하세요. 운전 중에는 화면을 조작하지 마십시오.</p>
+    </section>
+  </main>
+
+  <footer><p>테슬라 광주·전남 오너 정보방 · 회원 공동 자료</p><p><a href="index.html">정보실로 돌아가기</a></p></footer>
+</body>
+</html>
