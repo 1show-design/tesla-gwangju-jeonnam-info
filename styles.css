@@ -35,6 +35,7 @@ h1 em { color: var(--red); font-style: normal; }
 .hero-actions { display: flex; gap: .75rem; margin-top: 2rem; }
 .button { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; padding: .8rem 1.25rem; border: 1px solid var(--ink); font: inherit; font-weight: 800; text-decoration: none; cursor: pointer; }
 .button.primary { color: white; background: var(--ink); }
+.button.cafe { color: white; background: var(--red); border-color: var(--red); }
 .button.secondary { background: transparent; }
 .button:hover, .button:focus-visible { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--red); outline: none; }
 .meta-strip { margin-top: clamp(3rem, 8vw, 6rem); display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); max-width: 620px; }
@@ -49,6 +50,16 @@ h1 em { color: var(--red); font-style: normal; }
 .section-heading .kicker { margin-bottom: .6rem; }
 .section-lead { max-width: 740px; margin: -1rem 0 2.5rem 3.3rem; color: var(--muted); }
 .info-section { background: white; }
+.cafe-card { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; padding: 1.35rem 1.5rem; color: white; background: var(--ink); border-left: 6px solid var(--red); text-decoration: none; transition: background .18s ease; }
+.cafe-card:hover, .cafe-card:focus-visible { background: var(--red); outline: none; }
+.cafe-card-label { color: #ff777b; font: 800 .75rem/1.2 Georgia, serif; letter-spacing: .12em; }
+.cafe-card:hover .cafe-card-label, .cafe-card:focus-visible .cafe-card-label { color: white; }
+.cafe-card-copy { display: flex; flex-direction: column; }
+.cafe-card-copy strong { font-size: 1.35rem; }
+.cafe-card-copy small { color: #ccc; font-size: .86rem; }
+.cafe-card:hover small, .cafe-card:focus-visible small { color: rgba(255,255,255,.85); }
+.cafe-card-arrow { color: #ff777b; font-size: 1.8rem; }
+.cafe-card:hover .cafe-card-arrow, .cafe-card:focus-visible .cafe-card-arrow { color: white; }
 .info-jump-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
 .info-jump-grid a { min-height: 170px; display: flex; flex-direction: column; padding: 1.15rem; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); text-decoration: none; background: white; transition: background .18s ease, color .18s ease; }
 .info-jump-grid a:hover, .info-jump-grid a:focus-visible { color: white; background: var(--red); outline: none; }
@@ -145,6 +156,8 @@ footer p { margin: 0; }
 
 @media (max-width: 560px) {
   .hero-actions { flex-direction: column; align-items: stretch; }
+  .cafe-card { grid-template-columns: 1fr auto; gap: .65rem 1rem; }
+  .cafe-card-label { grid-column: 1 / -1; }
   .meta-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .meta-strip strong { font-size: 1.05rem; }
   .rule-grid { grid-template-columns: 1fr; }
