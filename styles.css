@@ -19,7 +19,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .site-header { position: sticky; top: 0; z-index: 50; height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(1.25rem, calc((100vw - var(--max))/2)); background: rgba(244,244,241,.93); border-bottom: 1px solid rgba(18,18,18,.12); backdrop-filter: blur(14px); }
 .brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 800; letter-spacing: .08em; text-decoration: none; font-size: .85rem; }
-.brand-mark { display: grid; place-items: center; width: 30px; height: 30px; color: white; background: var(--red); font-family: Georgia, serif; font-weight: 900; clip-path: polygon(50% 0, 100% 17%, 82% 100%, 18% 100%, 0 17%); }
 nav { display: flex; gap: 1.6rem; }
 nav a { text-decoration: none; font-weight: 700; font-size: .88rem; }
 nav a:hover { color: var(--red); }
