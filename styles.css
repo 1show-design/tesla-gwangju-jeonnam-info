@@ -67,11 +67,6 @@ h1 em { color: var(--red); font-style: normal; }
 .info-jump-grid strong { margin-top: auto; font-size: 1.15rem; }
 .info-jump-grid small { color: var(--muted); font-size: .78rem; }
 .info-jump-grid a:hover small, .info-jump-grid a:focus-visible small { color: rgba(255,255,255,.8); }
-.bot-alert { margin-top: 1.5rem; display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; padding: 1.4rem; background: var(--ink); color: white; }
-.alert-icon { display: grid; place-items: center; width: 46px; height: 46px; background: var(--red); font: 900 1.5rem Georgia, serif; }
-.bot-alert span { color: #ff777b; font-size: .75rem; font-weight: 900; letter-spacing: .08em; }
-.bot-alert h3 { margin: .1rem 0 .35rem; font-size: 1.25rem; }
-.bot-alert p { margin: 0; color: #ccc; }
 .info-directory { margin-top: 4rem; border-top: 3px solid var(--ink); }
 .info-detail { scroll-margin-top: 80px; display: grid; grid-template-columns: 72px 1fr; gap: 1rem; padding: 2.4rem 0; border-bottom: 1px solid var(--line); }
 .info-detail > div:last-child { max-width: 760px; }
