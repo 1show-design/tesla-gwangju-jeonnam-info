@@ -16,7 +16,8 @@
 ## 파일
 
 - `index.html`: 회원 정보실과 최신 방 규칙
-- `drivelog.html`: TePilot 주행기록으로 장거리 경로를 짜는 방법
+- `drivelog.html`: TePilot 주행기록으로 장거리 경로를 짜는 방법과 회원용 AI 분석 절차
+- `drivelog.js`: 주행기록 분석 프롬프트 복사 기능
 - `styles.css`: 모바일 우선 반응형 디자인
 - `app.js`: 카카오톡 공지문 복사와 규칙 펼침 기능
 

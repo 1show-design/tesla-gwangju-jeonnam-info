@@ -14,7 +14,7 @@
   <a class="skip-link" href="#guide-main">본문으로 바로가기</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="테슬라 광주·전남 정보실로 돌아가기"><span class="brand-mark" aria-hidden="true">J</span><span>GWANGJU · JEONNAM OWNERS</span></a>
-    <nav aria-label="안내서 메뉴"><a href="#method">계산 방법</a><a href="#route">경로 짜기</a><a href="#privacy">공유 전 확인</a></nav>
+    <nav aria-label="안내서 메뉴"><a href="#try">직접 해보기</a><a href="#method">계산법</a><a href="#privacy">개인정보</a></nav>
   </header>
 
   <main class="guide-main" id="guide-main">
@@ -22,12 +22,64 @@
       <a class="guide-back" href="index.html#drivelog">← 정보실로 돌아가기</a>
       <p class="eyebrow"><span></span> 회원 실측 자료 · 2026. 09. 13.</p>
       <h1>주행기록으로<br><em>장거리 경로 짜기</em></h1>
-      <p>TePilot 앱에 쌓이는 주행기록을 구글 시트로 모아, 내 차가 지금 실제로 쓸 수 있는 배터리 용량과 주행 조건별 전비를 계산합니다. 그 숫자로 슈퍼차저를 어디서 들를지 미리 정하는 방법입니다.</p>
+      <p>TePilot 앱에 쌓이는 주행기록을 구글 시트로 모아, 내 차가 지금 실제로 쓸 수 있는 배터리 용량과 주행 조건별 전비를 계산합니다. 그 숫자로 수퍼차저를 어디서 들를지 미리 정하는 방법입니다.</p>
+      <a class="guide-start" href="#try">내 기록으로 직접 해보기 ↓</a>
       <div class="guide-metrics" aria-label="실측 사례 요약">
         <div><strong>13개</strong><span>70km 이상 구간을 분석</span></div>
         <div><strong>58kWh</strong><span>최근 기록으로 계산한 용량</span></div>
-        <div><strong>15%</strong><span>계획에 더할 배터리 여유분</span></div>
+        <div><strong>15%p</strong><span>도착할 때 남길 배터리 여유</span></div>
       </div>
+    </section>
+
+    <section class="guide-section prompt-workbench" id="try">
+      <p class="kicker">회원용 실행 도구</p>
+      <h2>기록 숫자만 복사하면 AI가 계산해 줍니다</h2>
+      <p class="guide-lead">주소나 이동 경로는 필요하지 않습니다. 아래 순서대로 준비한 뒤 프롬프트와 내 기록을 ChatGPT 또는 Claude에 붙여넣으세요.</p>
+
+      <ol class="member-steps">
+        <li><span>01</span><div><strong>History 시트 열기</strong><p>TePilot과 연결된 구글 시트에서 History 탭을 엽니다.</p></div></li>
+        <li><span>02</span><div><strong>숫자 여섯 항목만 준비</strong><p>날짜, 거리, 사용 전력량, 출발·도착 배터리, 중간 충전 여부만 남깁니다.</p></div></li>
+        <li><span>03</span><div><strong>프롬프트와 함께 붙여넣기</strong><p>아래 버튼으로 프롬프트를 복사하고, 마지막에 내 기록을 붙여넣어 분석을 요청합니다.</p></div></li>
+      </ol>
+
+      <aside class="data-warning" aria-label="개인정보 주의">
+        <strong>이 내용은 넣지 마세요</strong>
+        <p>집·회사 주소, 출발지·도착지, GPS 좌표, 이동 경로, 차량번호, VIN, API 키, Settings 시트 전체</p>
+      </aside>
+
+      <details class="input-example">
+        <summary>입력 형식 예시 보기</summary>
+        <div class="example-scroll">
+          <table>
+            <thead><tr><th>날짜</th><th>거리(km)</th><th>사용 전력량(kWh)</th><th>출발 배터리(%)</th><th>도착 배터리(%)</th><th>중간 충전</th></tr></thead>
+            <tbody>
+              <tr><td>2026-09-01</td><td>182</td><td>31.0</td><td>90</td><td>38</td><td>아니요</td></tr>
+              <tr><td>2026-09-07</td><td>210</td><td>35.2</td><td>92</td><td>32</td><td>아니요</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>위 숫자는 입력 방법을 보여 주기 위한 가상 예시입니다. 한 줄만으로 단정하지 말고 여러 장거리 기록을 함께 넣어 주세요.</p>
+      </details>
+
+      <div class="prompt-card">
+        <div class="prompt-heading">
+          <div><span>복사해서 바로 사용</span><h3>장거리 주행기록 분석 프롬프트</h3></div>
+          <button class="button prompt-copy" id="copyDrivePrompt" type="button">분석 프롬프트 복사</button>
+        </div>
+        <pre id="drivePromptPreview" aria-label="분석 프롬프트 미리보기">테슬라 장거리 주행기록을 분석해 주세요.
+
+주소·좌표·차량 식별정보는 요구하거나 추정하지 마세요.
+70km 이상이며 중간 충전이 없는 기록만 사용하세요.
+기록별 실제 사용 가능 용량과 보수적인 기준값을 계산하세요.
+목적지까지 필요한 배터리와 도착 여유 15%p를 반영하세요.
+차량 트립 플래너를 우선 확인하라는 안전 안내를 포함하세요.</pre>
+      </div>
+
+      <div class="ai-actions" aria-label="AI 서비스 열기">
+        <p><strong>사용 순서</strong> 프롬프트 복사 → AI 열기 → 붙여넣기 → 내 기록 추가</p>
+        <div><a class="button primary" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT 열기 ↗</a><a class="button secondary" href="https://claude.ai/new" target="_blank" rel="noopener noreferrer">Claude 열기 ↗</a></div>
+      </div>
+      <p class="copy-status" id="drivePromptStatus" role="status" aria-live="polite"></p>
     </section>
 
     <section class="guide-section" id="method">
@@ -38,7 +90,7 @@
         <article class="guide-step"><span>01</span><h3>TePilot에 기록 쌓기</h3><p>거리, 시간, 쓴 전력량, 출발·도착 배터리가 앱에 자동으로 쌓입니다.</p></article>
         <article class="guide-step"><span>02</span><h3>History 시트만 보기</h3><p>주행기록이 쌓이는 History 시트에서 70km 이상 달리고 중간에 충전하지 않은 구간만 고릅니다.</p></article>
         <article class="guide-step"><span>03</span><h3>실제 용량 계산</h3><p>그 구간에서 쓴 전력량을 줄어든 배터리 비율로 나눠, 100% 기준 용량으로 바꿉니다.</p></article>
-        <article class="guide-step"><span>04</span><h3>경로에 적용</h3><p>용량과 전비, 거리에 여유분을 더해 슈퍼차저까지 갈 수 있는지 확인합니다.</p></article>
+        <article class="guide-step"><span>04</span><h3>경로에 적용</h3><p>용량과 전비, 거리에 여유분을 더해 수퍼차저까지 갈 수 있는지 확인합니다.</p></article>
       </div>
       <div class="formula-box">
         <code>100% 기준 용량(kWh) = 구간에서 쓴 전력량(kWh) ÷ (줄어든 배터리 ÷ 100)</code>
@@ -65,12 +117,12 @@
     </section>
 
     <section class="guide-section" id="route">
-      <p class="kicker">슈퍼차저 들를 곳 정하기</p>
+      <p class="kicker">수퍼차저 들를 곳 정하기</p>
       <h2>충전소를 먼저 정하고 경로를 맞춥니다</h2>
       <ol class="check-list">
-        <li><div><strong>차량 내비게이션과 테슬라 앱에서 슈퍼차저를 확인합니다.</strong><span>차가 알려 주는 충전 지점과 충전량을 먼저 참고해 주세요.</span></div></li>
-        <li><div><strong>다음 충전소까지 필요한 배터리를 계산합니다.</strong><span>구간 거리를 100으로 나눈 뒤 100km당 소모율을 곱하고, 여기에 배터리 15%를 더 얹습니다.</span></div></li>
-        <li><div><strong>목적지 근처에서 충전할 수 있는지 미리 확인합니다.</strong><span>돌아오기 전에 충전하기 어렵다면, 중간 슈퍼차저와 충전 시간을 처음부터 일정에 넣으세요.</span></div></li>
+        <li><div><strong>차량 내비게이션과 테슬라 앱에서 수퍼차저를 확인합니다.</strong><span>차가 알려 주는 충전 지점과 충전량을 먼저 참고해 주세요.</span></div></li>
+        <li><div><strong>다음 충전소까지 필요한 배터리를 계산합니다.</strong><span>구간 거리를 100으로 나눈 뒤 100km당 소모율을 곱하고, 도착할 때 남길 배터리 15%p를 더합니다.</span></div></li>
+        <li><div><strong>목적지 근처에서 충전할 수 있는지 미리 확인합니다.</strong><span>돌아오기 전에 충전하기 어렵다면, 중간 수퍼차저와 충전 시간을 처음부터 일정에 넣으세요.</span></div></li>
         <li><div><strong>80%가 넘으면 필요할 때만 더 충전합니다.</strong><span>배터리가 많이 찰수록 충전 속도가 느려집니다. 다음 구간만 갈 수 있으면 짧게 여러 번 충전하는 편이 빠를 수 있습니다.</span></div></li>
         <li><div><strong>화장실·식사 시간을 충전 시간에 맞춥니다.</strong><span>쉬어야 하는 곳을 충전소로 잡으면 전체 이동 시간이 줄어듭니다.</span></div></li>
       </ol>
@@ -93,12 +145,13 @@
       <h2>공식 안내와 내 차 상태를 함께 확인하세요</h2>
       <ul class="source-list">
         <li><a href="https://tepilot.weekendproject.net/" target="_blank" rel="noopener noreferrer">TePilot 공식 소개</a> — 자동 차계부 등 앱 기능 확인</li>
-        <li><a href="https://www.tesla.com/ko_kr/support/charging/supercharging" target="_blank" rel="noopener noreferrer">테슬라 슈퍼차저 공식 안내</a> — 경로 계획, 충전 한도, 충전 속도</li>
+        <li><a href="https://www.tesla.com/ko_kr/support/charging/supercharging" target="_blank" rel="noopener noreferrer">테슬라 수퍼차저 공식 안내</a> — 경로 계획, 충전 한도, 충전 속도</li>
       </ul>
       <p class="guide-disclaimer">이 자료는 차 한 대의 실제 기록을 정리한 비공식 참고자료입니다. 여기 적힌 58kWh와 전비 범위를 다른 차에 그대로 쓰지 마시고, 내 차의 내비게이션 안내와 배터리 상태, 날씨, 도로 상황을 먼저 확인해 주세요. 운전 중에는 화면을 만지지 마세요.</p>
     </section>
   </main>
 
   <footer><p>테슬라 광주·전남 오너 정보방 · 회원 공동 자료</p><p><a href="index.html">정보실로 돌아가기</a></p></footer>
+  <script src="drivelog.js"></script>
 </body>
 </html>
