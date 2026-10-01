@@ -278,3 +278,25 @@ footer p { margin: 0; }
   .hero-shared { grid-template-columns: 1fr; gap: 1rem; padding: 1.15rem; }
   .hero-shared .button { width: 100%; }
 }
+
+/* 회원 가게 */
+.shop-tools { display: grid; gap: .9rem; margin: 1.5rem 0 1rem; }
+.shop-tools input { width: 100%; max-width: 520px; min-height: 48px; padding: .7rem .9rem; border: 1px solid var(--ink); background: white; font: inherit; }
+.shop-filters { display: flex; flex-wrap: wrap; gap: .45rem; }
+.shop-filters button { min-height: 40px; padding: .4rem .8rem; border: 1px solid var(--ink); background: white; font: inherit; font-size: .88rem; font-weight: 800; cursor: pointer; }
+.shop-filters button[aria-pressed="true"] { color: white; background: var(--ink); }
+.shop-status { color: #666; font-size: .9rem; }
+.shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: var(--ink); border: 1px solid var(--ink); }
+.shop-grid:empty { display: none; }
+.shop-card { display: flex; flex-direction: column; gap: .35rem; padding: 1.2rem; background: white; }
+.shop-card h3 { margin: 0; font-size: 1.15rem; }
+.shop-card p { margin: 0; }
+.shop-meta { color: #777; font-size: .8rem; }
+.shop-meta span { margin-right: .5rem; color: var(--red); font-weight: 900; }
+.shop-benefit { margin-top: .3rem !important; padding: .5rem .65rem; background: #fff4f4; border-left: 3px solid var(--red); font-size: .9rem; }
+.shop-benefit b { margin-right: .45rem; color: var(--red); }
+.shop-actions { display: flex; flex-wrap: wrap; gap: .4rem .9rem; margin-top: auto; padding-top: .6rem; }
+.shop-actions a { font-size: .88rem; font-weight: 800; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+.shop-steps { padding-left: 1.2rem; }
+.shop-steps li { margin: .3rem 0; }
+.button.is-disabled { opacity: .5; pointer-events: none; }

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="테슬라 광주·전남 오너 단톡방 회원이 운영하는 가게 모음">
+  <title>회원 가게 · 테슬라 광주·전남</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111'/%3E%3Cpath d='M35 7 17 36h13l-2 21 19-31H34z' fill='%23e82127'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="guide-page">
+  <a class="skip-link" href="#guide-main">본문으로 바로가기</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="테슬라 광주·전남 정보실로 돌아가기"><span>GWANGJU · JEONNAM OWNERS</span></a>
+    <nav aria-label="가게 메뉴"><a href="#shop-list">가게 목록</a><a href="#shop-join">등록하기</a><a href="#shop-rule">이용 안내</a></nav>
+  </header>
+
+  <main class="guide-main" id="guide-main">
+    <section class="guide-hero">
+      <a class="guide-back" href="index.html">← 정보실로 돌아가기</a>
+      <p class="eyebrow"><span></span> 회원끼리 서로 이용하기</p>
+      <h1>우리 회원<br><em>가게</em></h1>
+      <p>단톡방 회원이 운영하는 가게와 업체를 모았습니다. 같은 값이면 회원 가게를 먼저 이용해 주세요. 회원이 설문지로 등록하고, 운영진이 확인한 가게만 이 페이지에 자동으로 올라갑니다.</p>
+      <div class="guide-metrics" aria-label="등록 현황">
+        <div><strong id="shop-count">–</strong><span>등록된 가게</span></div>
+        <div><strong id="shop-cats">–</strong><span>업종</span></div>
+        <div><strong id="shop-regions">–</strong><span>지역</span></div>
+      </div>
+    </section>
+
+    <section class="guide-section" id="shop-list">
+      <p class="kicker">가게 목록</p>
+      <h2>업종별로 찾아보세요</h2>
+      <div class="shop-tools">
+        <input id="shop-search" type="search" placeholder="가게 이름, 지역, 소개로 찾기" aria-label="가게 검색">
+        <div class="shop-filters" id="shop-filters" role="group" aria-label="업종 고르기"></div>
+      </div>
+      <p class="shop-status" id="shop-status" role="status">가게 목록을 불러오는 중입니다.</p>
+      <div class="shop-grid" id="shop-grid"></div>
+    </section>
+
+    <section class="guide-section" id="shop-join">
+      <p class="kicker">등록하기</p>
+      <h2>가게를 운영하시나요?</h2>
+      <p>설문지에 가게 이름, 업종, 지역, 한 줄 소개와 네이버 지도 공유 링크를 적어 주세요. 운영진이 확인한 뒤 이 페이지에 올립니다. 내용을 바꾸고 싶으면 설문지를 다시 내고 운영진에게 알려 주세요.</p>
+      <ol class="shop-steps">
+        <li>네이버 지도 앱에서 내 가게를 검색합니다.</li>
+        <li><b>공유</b> → <b>링크 복사</b>를 누릅니다.</li>
+        <li>설문지의 ‘네이버 지도 공유 링크’ 칸에 붙여 넣습니다.</li>
+      </ol>
+      <a class="button primary" id="shop-form-link" href="#" target="_blank" rel="noopener noreferrer">회원 가게 등록 설문지 →</a>
+    </section>
+
+    <section class="guide-section" id="shop-rule">
+      <p class="kicker">이용 안내</p>
+      <h2>알아 두세요</h2>
+      <p class="guide-disclaimer">이 목록은 회원끼리 서로 이용하도록 돕는 소개입니다. 운영진이 품질이나 가격을 보증하지 않습니다. 가격과 영업시간, 혜택은 바뀔 수 있으니 가시기 전에 가게에 확인해 주세요. 단톡방에 직접 올리는 홍보 글은 지금처럼 운영진 승인 없이 올릴 수 없습니다. 보험·대출·투자·가상자산 권유 업종은 싣지 않습니다.</p>
+    </section>
+  </main>
+
+  <footer><p>테슬라 광주·전남 오너 정보방 · 회원 가게</p><p><a href="index.html">정보실로 돌아가기</a></p></footer>
+  <script src="shops.js"></script>
+</body>
+</html>
