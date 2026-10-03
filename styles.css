@@ -247,9 +247,9 @@ footer p { margin: 0; }
   .info-detail { grid-template-columns: 38px 1fr; }
   .contact-list, .link-stack { grid-template-columns: 1fr; }
   .plain-list li { grid-template-columns: 1fr; gap: .2rem; }
-  .guide-metrics { grid-template-columns: 1fr; }
-  .guide-metrics div { border-right: 0; border-bottom: 1px solid #4a4a4a; }
-  .guide-metrics div:last-child { border-bottom: 0; }
+  .guide-metrics div { padding: .8rem .7rem; }
+  .guide-metrics strong { font-size: 1.25rem; }
+  .guide-metrics span { font-size: .75rem; }
   .guide-flow, .privacy-grid { grid-template-columns: 1fr; }
   .guide-step { min-height: 180px; }
   .prompt-heading { align-items: stretch; flex-direction: column; }
@@ -289,6 +289,11 @@ footer p { margin: 0; }
 .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1px; background: var(--ink); border: 1px solid var(--ink); }
 .shop-grid:empty { display: none; }
 .shop-card { display: flex; flex-direction: column; gap: .35rem; padding: 1.2rem; background: white; }
+.shop-photos { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; margin: -1.2rem -1.2rem .6rem; background: #eee; }
+.shop-photos a { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
+.shop-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.shop-say { margin-top: .3rem !important; padding: .5rem .65rem; background: #f4f4f4; border-left: 3px solid var(--ink); font-size: .9rem; }
+.shop-say b { display: block; margin-bottom: .1rem; font-size: .78rem; color: #555; }
 .shop-card h3 { margin: 0; font-size: 1.15rem; }
 .shop-card p { margin: 0; }
 .shop-meta { color: #777; font-size: .8rem; }

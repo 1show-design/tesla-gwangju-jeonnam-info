@@ -19,6 +19,12 @@ const els = {
 
 let shops = [];
 let activeCat = "전체";
+const DEFAULT_SAY = "테슬라 광주·전남 정보방 회원이에요";
+const kindOf = (s) => s.종류 || s.업종 || "기타";
+
+function photoIds(s) {
+  return String(s.사진 || "").split(/[\s,]+/).filter((id) => /^[\w-]{20,}$/.test(id)).slice(0, 3);
+}
 
 if (SHOP_CONFIG.formUrl) {
   els.form.href = SHOP_CONFIG.formUrl;
@@ -68,18 +74,22 @@ function naverMapUrl(u) {
 function render() {
   const q = els.search.value.trim().toLowerCase();
   const list = shops.filter((s) =>
-    (activeCat === "전체" || s.업종 === activeCat) &&
-    (!q || [s.가게명, s.지역, s.소개, s.혜택, s.업종].join(" ").toLowerCase().includes(q))
+    (activeCat === "전체" || kindOf(s) === activeCat) &&
+    (!q || [s.가게명, s.지역, s.소개, s.혜택, s.업종, s.종류].join(" ").toLowerCase().includes(q))
   );
   els.grid.innerHTML = list.map((s) => {
     const map = naverMapUrl(s.지도);
     const link = safeUrl(s.링크);
     const tel = String(s.전화 || "").replace(/[^0-9+]/g, "");
+    const photos = photoIds(s);
     return `<article class="shop-card">
-      <p class="shop-meta"><span>${esc(s.업종)}</span>${esc(s.지역)}</p>
+      ${photos.length ? `<div class="shop-photos">${photos.map((id, n) =>
+        `<a href="https://drive.google.com/file/d/${esc(id)}/view" target="_blank" rel="noopener noreferrer"><img src="https://drive.google.com/thumbnail?id=${esc(id)}&sz=w800" alt="${esc(s.가게명)} 사진 ${n + 1}" loading="lazy"></a>`).join("")}</div>` : ""}
+      <p class="shop-meta"><span>${esc(kindOf(s))}</span>${esc(s.지역)}</p>
       <h3>${esc(s.가게명)}</h3>
       <p>${esc(s.소개)}</p>
       ${s.혜택 ? `<p class="shop-benefit"><b>회원 혜택</b>${esc(s.혜택)}</p>` : ""}
+      <p class="shop-say"><b>방문하시면 이렇게 말씀해 주세요</b>“${esc(s.한마디 || DEFAULT_SAY)}”</p>
       <div class="shop-actions">
         ${map ? `<a href="${esc(map)}" target="_blank" rel="noopener noreferrer">네이버 지도 ↗</a>` : ""}
         ${tel ? `<a href="tel:${esc(tel)}">전화 ${esc(s.전화)}</a>` : ""}
@@ -93,7 +103,7 @@ function render() {
 }
 
 function buildFilters() {
-  const cats = ["전체", ...new Set(shops.map((s) => s.업종).filter(Boolean))];
+  const cats = ["전체", ...new Set(shops.map(kindOf))];
   els.filters.innerHTML = cats.map((c) =>
     `<button type="button" aria-pressed="${c === activeCat}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
   els.filters.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
@@ -116,9 +126,9 @@ async function load() {
     shops = rows
       .map((r) => Object.fromEntries(header.map((h, i) => [h.trim(), (r[i] || "").trim()])))
       .filter((s) => s.가게명)
-      .sort((a, b) => a.업종.localeCompare(b.업종, "ko") || a.가게명.localeCompare(b.가게명, "ko"));
+      .sort((a, b) => kindOf(a).localeCompare(kindOf(b), "ko") || a.가게명.localeCompare(b.가게명, "ko"));
     els.count.textContent = shops.length;
-    els.cats.textContent = new Set(shops.map((s) => s.업종)).size;
+    els.cats.textContent = new Set(shops.map(kindOf)).size;
     els.regions.textContent = new Set(shops.map((s) => s.지역)).size;
     buildFilters();
     render();
