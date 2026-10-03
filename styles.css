@@ -303,6 +303,8 @@ footer p { margin: 0; }
 .shop-actions { display: flex; flex-wrap: wrap; gap: .4rem .9rem; margin-top: auto; padding-top: .6rem; }
 .shop-actions a { font-size: .88rem; font-weight: 800; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
 .shop-nick { color: #555; font-size: .85rem; }
+.shop-ask { max-width: 720px; margin: 0 0 1rem; padding: .7rem .85rem; background: #f4f4f4; border-left: 3px solid var(--red); font-size: .92rem; }
+.shop-ask > b:first-child { display: block; margin-bottom: .15rem; color: var(--red); }
 .shop-nick b { color: var(--ink); }
 .shop-steps { padding-left: 1.2rem; }
 .shop-steps li { margin: .3rem 0; }

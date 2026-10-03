@@ -92,7 +92,7 @@ function render() {
       <p class="shop-say"><b>방문하시면 이렇게 말씀해 주세요</b>“${esc(s.한마디 || DEFAULT_SAY)}”</p>
       <div class="shop-actions">
         ${map ? `<a href="${esc(map)}" target="_blank" rel="noopener noreferrer">네이버 지도 ↗</a>` : ""}
-        ${s.닉네임 ? `<span class="shop-nick">단톡방 닉네임 <b>${esc(s.닉네임)}</b></span>` : ""}
+        ${s.닉네임 ? `<span class="shop-nick">단톡방 1:1 문의 <b>@${esc(s.닉네임)}</b></span>` : ""}
         ${tel ? `<a href="tel:${esc(tel)}">전화 ${esc(s.전화)}</a>` : ""}
         ${link ? `<a href="${esc(link)}" target="_blank" rel="noopener noreferrer">홈페이지 ↗</a>` : ""}
       </div>
