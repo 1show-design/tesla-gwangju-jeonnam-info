@@ -302,6 +302,8 @@ footer p { margin: 0; }
 .shop-benefit b { margin-right: .45rem; color: var(--red); }
 .shop-actions { display: flex; flex-wrap: wrap; gap: .4rem .9rem; margin-top: auto; padding-top: .6rem; }
 .shop-actions a { font-size: .88rem; font-weight: 800; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+.shop-nick { color: #555; font-size: .85rem; }
+.shop-nick b { color: var(--ink); }
 .shop-steps { padding-left: 1.2rem; }
 .shop-steps li { margin: .3rem 0; }
 .button.is-disabled { opacity: .5; pointer-events: none; }
