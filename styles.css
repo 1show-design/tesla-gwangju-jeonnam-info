@@ -73,6 +73,8 @@ h1 em { color: var(--red); font-style: normal; }
 .info-label { margin: 0 0 .2rem; color: var(--red); font-size: .75rem; font-weight: 900; letter-spacing: .09em; }
 .info-detail h3 { margin: 0 0 .8rem; font-size: clamp(1.55rem, 3vw, 2.4rem); letter-spacing: -.035em; }
 .info-detail p { color: #555; }
+.info-subhead { margin: 1.8rem 0 .5rem; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 1.2rem; letter-spacing: -.02em; }
+.info-detail .address b { margin-right: .4rem; color: var(--ink); }
 .contact-list, .link-stack { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin: 1rem 0; }
 .contact-list a, .link-stack a { display: flex; flex-direction: column; padding: 1rem; border: 1px solid var(--line); text-decoration: none; }
 .contact-list a:hover, .link-stack a:hover { border-color: var(--red); }
