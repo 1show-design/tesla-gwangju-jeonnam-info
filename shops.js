@@ -14,7 +14,7 @@ const ICON = {
   car: '<path d="M4 16v-4l2-5h12l2 5v4M4 16h16M4 16v2M20 16v2"/><circle cx="7.5" cy="16" r="1.4"/><circle cx="16.5" cy="16" r="1.4"/>',
   life: '<path d="M3 11l9-7 9 7M5 10v10h14V10"/><path d="M10 20v-5h4v5"/>',
   shop: '<path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>',
-  beauty: '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>',
+  med: '<rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/>',
   edu: '<path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c3 2 7 2 10 0v-5"/>',
   pro: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12h18"/>',
   farm: '<path d="M12 21c0-6 0-9 6-14-6 0-10 3-10 8M12 21c-1-4-3-6-7-7"/>',
@@ -25,13 +25,13 @@ const CATS = [
   { key: "자동차 정비·세차·용품", label: "자동차", icon: "car" },
   { key: "생활 서비스", label: "생활 서비스", icon: "life" },
   { key: "쇼핑·판매", label: "쇼핑", icon: "shop" },
-  { key: "뷰티·건강", label: "뷰티·건강", icon: "beauty" },
+  { key: "병원·의원·약국", label: "병원", icon: "med", alias: ["뷰티·건강"] },
   { key: "교육·강의", label: "교육", icon: "edu" },
   { key: "전문 서비스(세무·법률·디자인 등)", label: "전문 서비스", icon: "pro" },
   { key: "농수산물·특산품", label: "특산품·먹거리", icon: "farm" },
   { key: "기타", label: "기타", icon: "etc" },
 ];
-const catOf = (s) => CATS.find((c) => c.key === s.업종) || CATS[CATS.length - 1];
+const catOf = (s) => CATS.find((c) => c.key === s.업종 || (c.alias || []).includes(s.업종)) || CATS[CATS.length - 1];
 const kindOf = (s) => s.종류 || catOf(s).label;
 const areaOf = (s) => (/^광주/.test(s.지역 || "") ? "광주" : s.지역 ? "전남" : "");
 const areaRank = (s) => ({ 광주: 0, 전남: 1 }[areaOf(s)] ?? 2);
