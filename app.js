@@ -57,3 +57,22 @@ document.querySelectorAll("[data-accordion] details").forEach((detail) => {
     });
   });
 });
+
+// 정보실: 아이콘을 누르면 해당 카드를 펼치고 그 자리로 이동합니다. 한 번에 하나만 펼칩니다. (26.10.10)
+const infoCards = [...document.querySelectorAll(".info-card")];
+function openInfo(id, scroll) {
+  const card = document.getElementById(id);
+  if (!card || !card.classList.contains("info-card")) return;
+  card.open = true;
+  if (scroll) card.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+infoCards.forEach((card) => card.addEventListener("toggle", () => {
+  if (!card.open) return;
+  infoCards.forEach((o) => { if (o !== card) o.open = false; });
+  history.replaceState(null, "", "#" + card.id);
+}));
+document.querySelectorAll("[data-open]").forEach((a) => a.addEventListener("click", (e) => {
+  e.preventDefault();
+  openInfo(a.dataset.open, true);
+}));
+if (location.hash) openInfo(location.hash.slice(1), true);

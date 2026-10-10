@@ -8,7 +8,7 @@
   <meta name="description" content="테슬라 광주·전남 오너들이 함께 모은 생활 정보와 방 규칙">
   <title>테슬라 광주·전남 오너 정보방</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23111'/%3E%3Cpath d='M35 7 17 36h13l-2 21 19-31H34z' fill='%23e82127'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=1010d">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로가기</a>
@@ -18,6 +18,7 @@
       <span>GWANGJU · JEONNAM OWNERS</span>
     </a>
     <nav aria-label="주요 메뉴">
+      <a href="#apps">오너 서비스</a>
       <a href="#info">정보실</a>
       <a href="#quick">꼭 지킬 규칙</a>
       <a href="#rules">전체 규칙</a>
@@ -25,6 +26,54 @@
   </header>
 
   <main id="main">
+    <section class="section svc-section" id="apps">
+      <div class="svc-head">
+        <p class="kicker">우리 단톡방 오너님들이 만들었어요</p>
+        <h2>오너가 만든 서비스</h2>
+        <p>옆으로 넘겨 보세요. 누르면 바로 열립니다.</p>
+      </div>
+      <div class="svc-rail" tabindex="0" aria-label="오너가 만든 서비스 목록">
+        <article class="svc svc-a">
+          <p class="svc-type">웹</p>
+          <h3>전국 NACS 충전지도</h3>
+          <p class="svc-what">출발지와 목적지를 넣으면, 남은 주행거리로 어디서 충전할지 짜 줍니다.</p>
+          <div class="svc-chips"><span>충전 경로</span><span>충전소 주변 맛집</span><span>귀갓길 충전</span></div>
+          <p class="svc-who">충전소 확인 · 광주 다니엘님, 지성님</p>
+          <a class="svc-go" href="https://yluby-a11y.github.io/nacs-map/" target="_blank" rel="noopener noreferrer">열기 ↗</a>
+        </article>
+        <article class="svc svc-b">
+          <p class="svc-type">웹</p>
+          <h3>FSD Top 100</h3>
+          <p class="svc-what">FSD 이용률과 주행거리로 오너 순위를 보여 줍니다.</p>
+          <div class="svc-chips"><span>오너 순위</span><span>통계 사진으로 참여</span><span>500km 이상</span></div>
+          <p class="svc-who">만든 분 · 해리 님</p>
+          <a class="svc-go" href="https://fsd-top100.vercel.app/" target="_blank" rel="noopener noreferrer">열기 ↗</a>
+        </article>
+        <article class="svc svc-c">
+          <p class="svc-type">웹</p>
+          <h3>어시스트 리그</h3>
+          <p class="svc-what">테슬라 계정을 연결하면 FSD 주행 기록이 저절로 쌓이고 순위를 봅니다.</p>
+          <div class="svc-chips"><span>자동 기록</span><span>전국·지역·차종 순위</span></div>
+          <p class="svc-warn">테슬라 계정 연결이 필요합니다. 본인 판단으로 이용해 주세요.</p><p class="svc-who">만든 분 · 이웅섭(로이팩토리) 님</p>
+          <a class="svc-go" href="https://assistleague.app/" target="_blank" rel="noopener noreferrer">열기 ↗</a>
+        </article>
+        <article class="svc svc-d">
+          <p class="svc-type">정보방</p>
+          <h3>장거리 경로 짜기</h3>
+          <p class="svc-what">내 주행기록으로 실제 배터리 용량과 전비를 계산해, 수퍼차저 들를 곳을 정합니다.</p>
+          <div class="svc-chips"><span>내 기록 분석</span><span>AI 프롬프트</span></div>
+          <p class="svc-who">정보방 회원 실측 자료</p>
+          <a class="svc-go" href="drivelog.html#try">열기 →</a>
+        </article>
+        <article class="svc svc-add">
+          <p class="svc-type">함께 만들기</p>
+          <h3>직접 만든 서비스가 있으세요?</h3>
+          <p class="svc-what">테슬라 오너에게 도움이 되는 웹이나 앱을 만드셨다면 운영진에게 주소와 한 줄 소개를 보내 주세요. 여기에 함께 올립니다.</p>
+          <p class="svc-who">추천 코드(리퍼럴)가 붙은 주소는 빼고 올립니다.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="hero" id="top">
       <div class="eyebrow"><span></span> 전남광주통합특별시 · 2026. 09. 13.</div>
       <h1>함께 모은 정보,<br><em>필요할 때 바로 찾으세요.</em></h1>
@@ -60,7 +109,7 @@
         <button class="button secondary" id="copyNotice" type="button">카톡 공지문 복사</button>
       </div>
       <div class="meta-strip" aria-label="이 페이지 요약">
-        <div><strong>8가지</strong><span>생활 정보</span></div>
+        <div><strong>9가지</strong><span>생활 정보</span></div>
         <div><strong>12개</strong><span>방 규칙</span></div>
         <div><strong>계속</strong><span>회원 제보로 추가</span></div>
       </div>
@@ -70,58 +119,70 @@
       <div class="section-heading">
         <span class="section-number">01</span>
         <div>
-          <p class="kicker">필요한 항목을 눌러 주세요</p>
+          <p class="kicker">아이콘을 누르면 내용이 펼쳐집니다</p>
           <h2>우리끼리 정보실</h2>
         </div>
       </div>
       <p class="section-lead">회원 제보와 그동안 올라온 공지를 한곳에 모았습니다. 전화번호와 위치, 할인 제도, 외부 사이트 내용은 바뀔 수 있으니 가시기 전에 한 번 더 확인해 주세요.</p>
 
-      <div class="info-jump-grid">
-        <a href="#service"><span>01</span><strong>서비스센터·모바일 서비스</strong><small>센터 위치 · 찾아오는 정비</small></a>
-        <a href="#drive"><span>02</span><strong>드라이브·차박</strong><small>회원 제보 지도</small></a>
-        <a href="#charging"><span>03</span><strong>수퍼차저</strong><small>지도 3개</small></a>
-        <a href="#discount"><span>04</span><strong>순환도로 할인</strong><small>전남 전역으로 확대</small></a>
-        <a href="#food"><span>05</span><strong>맛집</strong><small>광주·전남방 추천</small></a>
-        <a href="#bodyshop"><span>06</span><strong>공식 바디샵</strong><small>광주 에스모터스</small></a>
-        <a href="#updates"><span>07</span><strong>차량 업데이트</strong><small>새 버전 확인</small></a>
-        <a href="#drivelog"><span>08</span><strong>장거리 경로 짜기</strong><small>AI 분석 프롬프트</small></a>
+      <div class="info-tiles">
+        <a href="#service" data-open="service"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></i><strong>서비스센터</strong><small>센터 위치 · 찾아오는 정비</small></a>
+        <a href="#drive" data-open="drive"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></i><strong>드라이브·차박</strong><small>회원 제보 지도</small></a>
+        <a href="#charging" data-open="charging"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></i><strong>수퍼차저</strong><small>지도 3개</small></a>
+        <a href="#discount" data-open="discount"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V6h18v3a3 3 0 0 0 0 6v3H3v-3a3 3 0 0 0 0-6z"/><path d="M10 9l4 6M10 15h0M14 9h0"/></svg></i><strong>순환도로 할인</strong><small>전남 전역으로 확대</small></a>
+        <a href="#food" data-open="food"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v8a3 3 0 0 0 6 0V3M8 3v18M17 3c-2 2-2.5 5-2.5 8h3V21"/></svg></i><strong>맛집</strong><small>광주·전남방 추천</small></a>
+        <a href="#bodyshop" data-open="bodyshop"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16v-4l2-5h12l2 5v4M4 16h16M4 16v2M20 16v2"/><circle cx="7.5" cy="16" r="1.4"/><circle cx="16.5" cy="16" r="1.4"/></svg></i><strong>공식 바디샵</strong><small>광주 에스모터스</small></a>
+        <a href="#updates" data-open="updates"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg></i><strong>차량 업데이트</strong><small>새 버전 확인</small></a>
+        <a href="#drivelog" data-open="drivelog"><i><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg></i><strong>장거리 경로</strong><small>내 기록으로 분석</small></a>
+        <a href="#review" data-open="review"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></i><strong>정비 후기</strong><small>회원 직접 이용 후기</small></a>
       </div>
 
-      <div class="info-directory">
-        <article class="info-detail" id="service">
-          <div class="info-index">01</div><div><p class="info-label">연락처 · 정비 예약</p><h3>테슬라 서비스센터와 모바일 서비스</h3><div class="contact-list"><a href="tel:0806171399"><span>기술지원 · 긴급출동</span><strong>080-617-1399</strong></a><a href="tel:0806171388"><span>대표번호</span><strong>080-617-1388</strong></a></div><p class="address"><b>광주 서비스센터</b> 광주광역시 남구 서문대로517번길 13 · 평일 8:30~17:30, 주말 휴무</p><a class="out-link" href="https://map.naver.com/p/search/%ED%85%8C%EC%8A%AC%EB%9D%BC%20%EA%B4%91%EC%A3%BC%20%EC%84%9C%EB%B9%84%EC%8A%A4%EC%84%BC%ED%84%B0" target="_blank" rel="noopener noreferrer">네이버 지도에서 보기 <span>↗</span></a>
+      <div class="info-cards">
+        <details class="info-card" id="service">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></i><span><small>연락처 · 정비 예약</small><b>테슬라 서비스센터와 모바일 서비스</b></span></summary>
+          <div class="info-card-body"><div class="contact-list"><a href="tel:0806171399"><span>기술지원 · 긴급출동</span><strong>080-617-1399</strong></a><a href="tel:0806171388"><span>대표번호</span><strong>080-617-1388</strong></a></div><p class="address"><b>광주 서비스센터</b> 광주광역시 남구 서문대로517번길 13 · 평일 8:30~17:30, 주말 휴무</p><a class="out-link" href="https://map.naver.com/p/search/%ED%85%8C%EC%8A%AC%EB%9D%BC%20%EA%B4%91%EC%A3%BC%20%EC%84%9C%EB%B9%84%EC%8A%A4%EC%84%BC%ED%84%B0" target="_blank" rel="noopener noreferrer">네이버 지도에서 보기 <span>↗</span></a>
             <h4 class="info-subhead">모바일 서비스 · 기술자가 찾아오는 정비</h4>
             <p>센터에 가지 않아도, 테슬라 기술자가 집이나 회사 주차장으로 와서 점검하고 고쳐 줍니다. 예약은 Tesla 앱에서만 받습니다.</p>
             <ul class="plain-list"><li><strong>예약 방법</strong><span>Tesla 앱 → <b>정비</b> → 증상 고르기와 메모 → 받을 방식에서 <b>모바일 서비스</b> 선택 → 날짜·시간 선택. 모바일 선택지가 나오는 항목만 찾아옵니다. 메모는 예약 24시간 전까지 고칠 수 있습니다.</span></li><li><strong>주로 하는 일</strong><span>타이어·와이퍼·12V 배터리 교체, 간단한 부품 교체처럼 그 자리에서 끝나는 작업입니다. 차를 들어 올려야 하는 큰 수리는 센터로 가야 합니다. 정확한 가능 여부는 앱에 증상과 주소를 넣으면 나옵니다.</span></li><li><strong>당일 준비</strong><span>차 주변에 작업할 공간을 비워 두고, 앱 메모에 주차 위치와 출입 방법(동·층, 출입 비밀번호 등)을 적어 주세요. 기술자는 도착 후 15분 정도 기다렸다가 다음 일정으로 이동합니다. 그날은 소프트웨어 업데이트를 설치하지 마세요. 작업이 길어집니다.</span></li><li><strong>비용</strong><span>앱에 나온 견적대로 진행하고, 끝나면 앱 알림을 받고 앱에서 결제합니다.</span></li></ul></div>
-        </article>
-        <article class="info-detail" id="drive">
-          <div class="info-index">02</div><div><p class="info-label">카카오맵</p><h3>드라이브 코스와 차박 장소</h3><p>군산택시 회원님이 제보해 주신 내용으로 함께 만든 지도입니다.</p><a class="out-link" href="http://kko.to/kgCnZ5GF3J" target="_blank" rel="noopener noreferrer">카카오맵에서 보기 <span>↗</span></a></div>
-        </article>
-        <article class="info-detail" id="charging">
-          <div class="info-index">03</div><div><p class="info-label">충전 지도</p><h3>수퍼차저 위치</h3><div class="link-stack"><a href="http://kko.to/TqMNlpS4o" target="_blank" rel="noopener noreferrer"><span>카카오맵</span><b>열기 ↗</b></a><a href="http://naver.me/Fk54T3MR" target="_blank" rel="noopener noreferrer"><span>네이버 지도</span><b>열기 ↗</b></a><a href="https://teslakoreaclub.com/sc.png" target="_blank" rel="noopener noreferrer"><span>전국 한 장으로 보기</span><b>열기 ↗</b></a></div></div>
-        </article>
-        <article class="info-detail" id="discount">
-          <div class="info-index">04</div><div><p class="info-label">제2순환도로 · 2027. 12. 31.까지</p><h3>친환경차 통행료 감면 신청</h3><ul class="plain-list"><li><strong>대상</strong><span>자동차등록증의 사용본거지가 전남광주통합특별시(27개 시·군·구)에 있는 전기차·수소전기차·태양광차입니다. 10월 1일부터 전남 지역 차량도 신청할 수 있습니다. 사용본거지를 다른 지역으로 옮기면 카드를 쓸 수 없습니다.</span></li><li><strong>감면율</strong><span>2026년 12월 31일까지 50%, 2027년 1월 1일부터 12월 31일까지 30%입니다. 소형차는 600원에서 840원으로 바뀝니다.</span></li><li><strong>할인 받는 법</strong><span>하이패스 차로에서는 할인되지 않습니다. 일반 차로로 지나가며 감면카드를 제시하세요.</span></li><li><strong>신청 창구</strong><span>광주청사 도로과, 무안청사 도로정책과, 동부청사 민원실 세 곳에서 받습니다. 주소지에 따라 창구를 나누지 않으니 편한 곳으로 신청하세요.</span></li><li><strong>방문 신청</strong><span>신청서를 쓰면 카드를 바로 받습니다. 본인 또는 대리인 신분증과 자동차등록증을 가져가세요.</span></li><li><strong>팩스·이메일</strong><span>신청서를 작성해 자동차등록증과 함께 세 청사 중 <b>한 곳에만</b> 보내세요. 여러 곳에 보내면 중복 접수가 될 수 있습니다. 카드는 등기로 받습니다.</span></li><li><strong>청사별 번호</strong><span>광주청사 팩스 <b>062-613-4729</b> · 전화 <a href="tel:0626134735">062-613-4735</a><br>무안청사 팩스 <b>061-286-4804</b> · 전화 <a href="tel:0612867424">061-286-7424</a><br>동부청사 팩스 <b>061-286-4799</b> · 전화 <a href="tel:0612867843">061-286-7843</a></span></li><li><strong>이메일</strong><span>광주 rhs5213@korea.kr · 무안 ciotm@korea.kr · 동부 qkrgksmf1318@korea.kr</span></li><li><strong>접수 확인</strong><span>문자나 카카오톡 접수 안내는 공지에 없습니다. 보내고 30분~1시간 뒤 보낸 청사에 전화해 접수 여부와 등기 받는 시기를 확인하세요. 신청서 연락처 칸에는 휴대폰 번호를 꼭 적으세요.</span></li></ul><a class="out-link" href="https://www.jeonnam-gwangju.go.kr/fileDownload.do?fileSe=BB&amp;fileKey=JG_0000000001%7C109&amp;fileSn=2&amp;boardId=JG_0000000001&amp;seq=109" target="_blank" rel="noopener noreferrer">감면카드 신청서 내려받기(한글 파일) <span>↓</span></a> &nbsp; <a class="out-link" href="https://www.jeonnam-gwangju.go.kr/boardView.do?pageId=jngj21&amp;boardId=JG_0000000001&amp;seq=109" target="_blank" rel="noopener noreferrer">특별시 공식 공지 보기 <span>↗</span></a></div>
-        </article>
-        <article class="info-detail" id="food">
-          <div class="info-index">05</div><div><p class="info-label">회원 추천</p><h3>광주·전남방 맛집</h3><p>회원들이 직접 가 보고 모은 지도입니다. 맛이 달라졌거나 문을 닫은 곳이 있으면 운영진에게 알려 주세요.</p><div class="link-stack"><a href="http://kko.to/B3tnFLVD0" target="_blank" rel="noopener noreferrer"><span>광주·전남방 맛집 지도</span><b>열기 ↗</b></a><a href="https://naver.me/GMmmx3lQ" target="_blank" rel="noopener noreferrer"><span>브라보김 회원님 추천 · ACC</span><b>열기 ↗</b></a></div></div>
-        </article>
-        <article class="info-detail" id="bodyshop">
-          <div class="info-index">06</div><div><p class="info-label">광주 공식 바디샵</p><h3>에스모터스</h3><p class="address">광주광역시 광산구 어등대로 605</p><div class="contact-list"><a href="tel:0623850400"><span>대표전화</span><strong>062-385-0400</strong></a><a href="tel:01046060599"><span>김주식 센터장님</span><strong>010-4606-0599</strong></a></div><a class="out-link" href="http://naver.me/5FecA0Xw" target="_blank" rel="noopener noreferrer">네이버 지도에서 보기 <span>↗</span></a></div>
-        </article>
-        <article class="info-detail" id="updates">
-          <div class="info-index">07</div><div><p class="info-label">외부 정보</p><h3>테슬라 소프트웨어 업데이트</h3><p>업데이트가 들어오는 시점은 차량마다 다릅니다. 아래 사이트에서 지금 어떤 버전이 풀렸고 무엇이 바뀌었는지 확인할 수 있습니다.</p><a class="out-link" href="https://www.notateslaapp.com/index" target="_blank" rel="noopener noreferrer">새 버전 확인하기 <span>↗</span></a></div>
-        </article>
-        <article class="info-detail featured-detail" id="drivelog">
-          <div class="info-index">08</div>
-          <div>
-            <p class="info-label">회원 실측 자료 · 2026. 09. 13.</p>
-            <h3>주행기록으로 장거리 경로 짜기</h3>
-            <p>내 차가 실제로 쓴 전력량을 구글 시트에 모아, 지금 쓸 수 있는 배터리 용량과 구간별 전비를 계산하는 방법입니다. 그 숫자로 수퍼차저를 어디서 들를지 미리 정합니다. 공개한 자료에는 집 주소와 좌표, API 키를 넣지 않았습니다.</p>
+        </details>
+        <details class="info-card" id="drive">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg></i><span><small>카카오맵</small><b>드라이브 코스와 차박 장소</b></span></summary>
+          <div class="info-card-body"><p>군산택시 회원님이 제보해 주신 내용으로 함께 만든 지도입니다.</p><a class="out-link" href="http://kko.to/kgCnZ5GF3J" target="_blank" rel="noopener noreferrer">카카오맵에서 보기 <span>↗</span></a></div>
+        </details>
+        <details class="info-card" id="charging">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></i><span><small>충전 지도</small><b>수퍼차저 위치</b></span></summary>
+          <div class="info-card-body"><div class="link-stack"><a href="http://kko.to/TqMNlpS4o" target="_blank" rel="noopener noreferrer"><span>카카오맵</span><b>열기 ↗</b></a><a href="http://naver.me/Fk54T3MR" target="_blank" rel="noopener noreferrer"><span>네이버 지도</span><b>열기 ↗</b></a><a href="https://teslakoreaclub.com/sc.png" target="_blank" rel="noopener noreferrer"><span>전국 한 장으로 보기</span><b>열기 ↗</b></a></div></div>
+        </details>
+        <details class="info-card" id="discount">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V6h18v3a3 3 0 0 0 0 6v3H3v-3a3 3 0 0 0 0-6z"/><path d="M10 9l4 6M10 15h0M14 9h0"/></svg></i><span><small>제2순환도로 · 2027. 12. 31.까지</small><b>친환경차 통행료 감면 신청</b></span></summary>
+          <div class="info-card-body"><ul class="plain-list"><li><strong>대상</strong><span>자동차등록증의 사용본거지가 전남광주통합특별시(27개 시·군·구)에 있는 전기차·수소전기차·태양광차입니다. 10월 1일부터 전남 지역 차량도 신청할 수 있습니다. 사용본거지를 다른 지역으로 옮기면 카드를 쓸 수 없습니다.</span></li><li><strong>감면율</strong><span>2026년 12월 31일까지 50%, 2027년 1월 1일부터 12월 31일까지 30%입니다. 소형차는 600원에서 840원으로 바뀝니다.</span></li><li><strong>할인 받는 법</strong><span>하이패스 차로에서는 할인되지 않습니다. 일반 차로로 지나가며 감면카드를 제시하세요.</span></li><li><strong>신청 창구</strong><span>광주청사 도로과, 무안청사 도로정책과, 동부청사 민원실 세 곳에서 받습니다. 주소지에 따라 창구를 나누지 않으니 편한 곳으로 신청하세요.</span></li><li><strong>방문 신청</strong><span>신청서를 쓰면 카드를 바로 받습니다. 본인 또는 대리인 신분증과 자동차등록증을 가져가세요.</span></li><li><strong>팩스·이메일</strong><span>신청서를 작성해 자동차등록증과 함께 세 청사 중 <b>한 곳에만</b> 보내세요. 여러 곳에 보내면 중복 접수가 될 수 있습니다. 카드는 등기로 받습니다.</span></li><li><strong>청사별 번호</strong><span>광주청사 팩스 <b>062-613-4729</b> · 전화 <a href="tel:0626134735">062-613-4735</a><br>무안청사 팩스 <b>061-286-4804</b> · 전화 <a href="tel:0612867424">061-286-7424</a><br>동부청사 팩스 <b>061-286-4799</b> · 전화 <a href="tel:0612867843">061-286-7843</a></span></li><li><strong>이메일</strong><span>광주 rhs5213@korea.kr · 무안 ciotm@korea.kr · 동부 qkrgksmf1318@korea.kr</span></li><li><strong>접수 확인</strong><span>문자나 카카오톡 접수 안내는 공지에 없습니다. 보내고 30분~1시간 뒤 보낸 청사에 전화해 접수 여부와 등기 받는 시기를 확인하세요. 신청서 연락처 칸에는 휴대폰 번호를 꼭 적으세요.</span></li></ul><a class="out-link" href="https://www.jeonnam-gwangju.go.kr/fileDownload.do?fileSe=BB&amp;fileKey=JG_0000000001%7C109&amp;fileSn=2&amp;boardId=JG_0000000001&amp;seq=109" target="_blank" rel="noopener noreferrer">감면카드 신청서 내려받기(한글 파일) <span>↓</span></a> &nbsp; <a class="out-link" href="https://www.jeonnam-gwangju.go.kr/boardView.do?pageId=jngj21&amp;boardId=JG_0000000001&amp;seq=109" target="_blank" rel="noopener noreferrer">특별시 공식 공지 보기 <span>↗</span></a></div>
+        </details>
+        <details class="info-card" id="food">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v8a3 3 0 0 0 6 0V3M8 3v18M17 3c-2 2-2.5 5-2.5 8h3V21"/></svg></i><span><small>회원 추천</small><b>광주·전남방 맛집</b></span></summary>
+          <div class="info-card-body"><p>회원들이 직접 가 보고 모은 지도입니다. 맛이 달라졌거나 문을 닫은 곳이 있으면 운영진에게 알려 주세요.</p><div class="link-stack"><a href="http://kko.to/B3tnFLVD0" target="_blank" rel="noopener noreferrer"><span>광주·전남방 맛집 지도</span><b>열기 ↗</b></a><a href="https://naver.me/GMmmx3lQ" target="_blank" rel="noopener noreferrer"><span>브라보김 회원님 추천 · ACC</span><b>열기 ↗</b></a></div></div>
+        </details>
+        <details class="info-card" id="bodyshop">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16v-4l2-5h12l2 5v4M4 16h16M4 16v2M20 16v2"/><circle cx="7.5" cy="16" r="1.4"/><circle cx="16.5" cy="16" r="1.4"/></svg></i><span><small>광주 공식 바디샵</small><b>에스모터스</b></span></summary>
+          <div class="info-card-body"><p class="address">광주광역시 광산구 어등대로 605</p><div class="contact-list"><a href="tel:0623850400"><span>대표전화</span><strong>062-385-0400</strong></a><a href="tel:01046060599"><span>김주식 센터장님</span><strong>010-4606-0599</strong></a></div><a class="out-link" href="http://naver.me/5FecA0Xw" target="_blank" rel="noopener noreferrer">네이버 지도에서 보기 <span>↗</span></a></div>
+        </details>
+        <details class="info-card" id="updates">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.7M20 4v5h-5"/></svg></i><span><small>외부 정보</small><b>테슬라 소프트웨어 업데이트</b></span></summary>
+          <div class="info-card-body"><p>업데이트가 들어오는 시점은 차량마다 다릅니다. 아래 사이트에서 지금 어떤 버전이 풀렸고 무엇이 바뀌었는지 확인할 수 있습니다.</p><a class="out-link" href="https://www.notateslaapp.com/index" target="_blank" rel="noopener noreferrer">새 버전 확인하기 <span>↗</span></a></div>
+        </details>
+        <details class="info-card" id="drivelog">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg></i><span><small>회원 실측 자료 · 2026. 09. 13.</small><b>주행기록으로 장거리 경로 짜기</b></span></summary>
+          <div class="info-card-body"><p>내 차가 실제로 쓴 전력량을 구글 시트에 모아, 지금 쓸 수 있는 배터리 용량과 구간별 전비를 계산하는 방법입니다. 그 숫자로 수퍼차저를 어디서 들를지 미리 정합니다. 공개한 자료에는 집 주소와 좌표, API 키를 넣지 않았습니다.</p>
             <div class="data-chips" aria-label="실측 사례 요약"><span><b>13개</b>장거리 구간</span><span><b>58kWh</b>실제 쓸 수 있는 용량</span><span><b>15%p</b>도착 배터리 여유</span></div>
-            <a class="out-link" href="drivelog.html#try">내 기록으로 분석하기 <span>→</span></a>
-          </div>
-        </article>
+            <a class="out-link" href="drivelog.html#try">내 기록으로 분석하기 <span>→</span></a></div>
+        </details>
+        <details class="info-card" id="review">
+          <summary><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></i><span><small>회원 직접 이용 후기 · 2026. 10.</small><b>모델3 2020년식 매트릭스 헤드라이트 교체</b></span></summary>
+          <div class="info-card-body"><p>구형 헤드라이트를 떼고 매트릭스 헤드라이트(양쪽)로 바꾼 뒤 코딩까지 마친 후기입니다. 부품은 알리익스프레스에서 직접 사서 가져갔습니다.</p>
+            <div class="data-chips" aria-label="비용 요약"><span><b>약 64만 원</b>총비용</span><span><b>약 34만 원</b>부품(직구)</span><span><b>30만 원</b>공임·코딩</span></div>
+            <ul class="plain-list"><li><strong>정비소</strong><span>51VOLT(오일볼트) · 경기도 용인시 처인구 포곡읍 금어로 224. 테슬라 서비스센터 테크니션 출신 두 분이 운영하는 테슬라 전문 사설 정비소입니다. 미리 문의하고 방문하세요.</span></li><li><strong>비교</strong><span>이 정비소에서 정품 헤드라이트로 하면 총 180만 원입니다.</span></li><li><strong>요점</strong><span>부품만 미리 사 가면 테슬라 전문 정비소라 코딩까지 한 번에 끝납니다.</span></li></ul>
+            <div class="link-stack"><a href="https://m.blog.naver.com/51volt" target="_blank" rel="noopener noreferrer"><span>51VOLT 블로그 · 문의</span><b>열기 ↗</b></a><a href="https://ko.aliexpress.com/item/1005010050650278.html" target="_blank" rel="noopener noreferrer"><span>후기에 쓴 부품 (알리)</span><b>열기 ↗</b></a></div>
+            <p class="note-small">회원이 직접 이용하고 나눈 후기입니다. 정보방은 업체와 관계가 없고, 가격은 바뀔 수 있습니다.</p></div>
+        </details>
       </div>
     </section>
 
@@ -205,9 +266,9 @@
   </footer>
 
   <div class="mobile-nav" aria-label="모바일 빠른 메뉴">
-    <a href="#info">정보</a><a href="#quick">핵심</a><a href="#rules">규칙</a><button id="copyNoticeMobile" type="button">복사</button>
+    <a href="#apps">서비스</a><a href="#info">정보</a><a href="#quick">핵심</a><a href="#rules">규칙</a><button id="copyNoticeMobile" type="button">복사</button>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite">카톡 공지문을 복사했습니다.</div>
-  <script src="app.js"></script>
+  <script src="app.js?v=1010d"></script>
 </body>
 </html>
