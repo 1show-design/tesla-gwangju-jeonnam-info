@@ -22,13 +22,13 @@ const ICON = {
 };
 const CATS = [
   { key: "음식점·카페", label: "음식·카페", icon: "food" },
-  { key: "자동차 정비·세차·용품", label: "자동차", icon: "car" },
   { key: "생활 서비스", label: "생활 서비스", icon: "life" },
   { key: "쇼핑·판매", label: "쇼핑", icon: "shop" },
   { key: "병원·의원·약국", label: "병원", icon: "med", alias: ["뷰티·건강"] },
   { key: "교육·강의", label: "교육", icon: "edu" },
   { key: "전문 서비스(세무·법률·디자인 등)", label: "전문 서비스", icon: "pro" },
   { key: "농수산물·특산품", label: "특산품·먹거리", icon: "farm" },
+  { key: "자동차 정비·세차·용품", label: "자동차", icon: "car" },
   { key: "기타", label: "기타", icon: "etc" },
 ];
 const catOf = (s) => CATS.find((c) => c.key === s.업종 || (c.alias || []).includes(s.업종)) || CATS[CATS.length - 1];
