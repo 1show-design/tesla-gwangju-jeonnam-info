@@ -411,3 +411,63 @@ footer p { margin: 0; }
   .h2row { gap: 12px; padding: 12px 14px; }
   .hero2::after { display: none; }
 }
+
+/* 센터 가격표 (26.10.12) */
+.price-table { width: 100%; margin: .6rem 0 .4rem; border-collapse: collapse; font-size: .92rem; }
+.price-table th { padding: .5rem .6rem; background: var(--ink); color: #fff; font-size: .78rem; text-align: left; }
+.price-table th:last-child, .price-table td:last-child { text-align: right; white-space: nowrap; }
+.price-table td { padding: .6rem; border-bottom: 1px solid var(--line); vertical-align: top; color: #333; }
+.price-table td:last-child { font-weight: 800; color: var(--ink); }
+.price-table td small { display: block; margin-top: .15rem; color: var(--muted); font-size: .76rem; font-weight: 400; white-space: normal; }
+.price-yn td:last-child, .price-yn th:last-child { text-align: left; white-space: normal; font-weight: 400; color: #8a1a1d; }
+.price-yn th:last-child { color: #fff; }
+.price-yn td:nth-child(2) { color: #1d6b3a; }
+.price-yn td:first-child { font-weight: 800; white-space: nowrap; }
+
+/* 센터 가격표 상황별 구성 (26.10.12) */
+.pg-lead { font-size: 1rem; color: #333 !important; }
+.pg-chips { display: flex; gap: 6px; overflow-x: auto; margin: .8rem -2px .6rem; padding: 2px; scrollbar-width: none; }
+.pg-chips::-webkit-scrollbar { display: none; }
+.pg-chips a { flex: none; padding: 8px 13px; border-radius: 999px; background: var(--ink); color: #fff; font-size: .85rem; font-weight: 800; text-decoration: none; }
+.pg-chips a:nth-child(n+2) { background: var(--paper); color: var(--ink); }
+.pg-note { margin: .4rem 0 0; color: var(--muted) !important; font-size: .82rem; }
+.pg-sec { scroll-margin-top: 84px; margin-top: 1.4rem; padding: 18px 16px; border-radius: 16px; background: #fafaf8; border: 1px solid var(--line); }
+.pg-tag { margin: 0 0 .2rem; color: var(--red) !important; font-size: .74rem; font-weight: 900; letter-spacing: .04em; }
+.pg-sec h4 { margin: 0 0 .5rem; font-size: 1.15rem; line-height: 1.35; letter-spacing: -.02em; }
+.pg-sec > p { margin: 0 0 .6rem; color: #444; font-size: .93rem; }
+.pg-list { list-style: none; margin: .4rem 0 0; padding: 0; }
+.pg-item { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+.pg-item:first-child { border-top: 0; }
+.pg-item > div { min-width: 0; }
+.pg-item b { display: block; font-size: 1rem; }
+.pg-item p { margin: .15rem 0 0; color: #555 !important; font-size: .86rem; line-height: 1.5; }
+.pg-when { display: inline-block; margin-top: .35rem; padding: 3px 8px; border-radius: 8px; background: #fff1f1; color: var(--red); font-size: .74rem; font-weight: 700; line-height: 1.4; }
+.pg-when::before { content: "이럴 때 · "; font-weight: 900; }
+.pg-item > strong { flex: none; text-align: right; font-size: 1.05rem; white-space: nowrap; }
+.pg-item > strong small { display: block; color: var(--muted); font-size: .7rem; font-weight: 500; }
+.pg-steps { list-style: none; counter-reset: st; margin: .4rem 0 .8rem; padding: 0; }
+.pg-steps li { position: relative; padding: 8px 0 8px 36px; font-size: .9rem; color: #444; counter-increment: st; }
+.pg-steps li::before { content: counter(st); position: absolute; left: 0; top: 8px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--red); color: #fff; font-size: .8rem; font-weight: 900; }
+.pg-steps b, .pg-plain b { display: block; color: var(--ink); font-size: .95rem; }
+.pg-plain { list-style: none; margin: 0; padding: 0; }
+.pg-plain li { padding: 10px 0; border-top: 1px solid var(--line); font-size: .88rem; color: #555; }
+.pg-plain li:first-child { border-top: 0; }
+.pg-tip { margin: .8rem 0 0 !important; padding: 10px 12px; border-radius: 10px; background: #fff; border-left: 3px solid var(--red); font-size: .85rem; color: #444 !important; }
+.pg-time { background: var(--paper); color: #555; }
+.pg-time::before { content: "걸리는 시간 · "; }
+.pg-item > strong { max-width: 42%; }
+.pg-item > strong small { white-space: normal; }
+.pg-yn { list-style: none; margin: .4rem 0 0; padding: 0; }
+.pg-yn li { padding: 10px 0; border-top: 1px solid var(--line); font-size: .88rem; }
+.pg-yn li:first-child { border-top: 0; }
+.pg-yn b { display: block; margin-bottom: .2rem; font-size: .95rem; }
+.pg-yn span { display: block; line-height: 1.5; }
+.pg-yn .ok { color: #1d6b3a; }
+.pg-yn .no { color: #8a1a1d; }
+.pg-easy { margin: .2rem 0 0 !important; padding-left: 10px; border-left: 2px solid #e2e2dc; color: #555 !important; font-size: .85rem !important; line-height: 1.55; }
+.pg-plain li > b { line-height: 1.45; }
+.pg-yn small { display: block; margin: .05rem 0 .3rem 10px; color: #666; font-size: .8rem; }
+.pg-sec .link-stack { margin-top: .9rem; }
+.pg-src { margin: .9rem 0 0 !important; padding-top: .7rem; border-top: 1px dashed #d6d6d0; color: var(--muted) !important; font-size: .78rem !important; line-height: 1.7; }
+.pg-src b { margin-right: .4rem; color: var(--ink); }
+.pg-src a { color: #555; text-decoration-color: var(--red); text-underline-offset: 2px; }
