@@ -75,4 +75,14 @@ document.querySelectorAll("[data-open]").forEach((a) => a.addEventListener("clic
   e.preventDefault();
   openInfo(a.dataset.open, true);
 }));
-if (location.hash) openInfo(location.hash.slice(1), true);
+// 주소에 #price처럼 카드 이름이 붙어 들어오면, 페이지가 다 그려진 뒤 그 카드로 이동합니다. (26.10.12)
+if (location.hash) {
+  const hashId = location.hash.slice(1);
+  openInfo(hashId, false);
+  const goHash = () => {
+    const card = document.getElementById(hashId);
+    if (card && card.classList.contains("info-card")) card.scrollIntoView({ block: "start" });
+  };
+  if (document.readyState === "complete") setTimeout(goHash, 60);
+  else window.addEventListener("load", () => setTimeout(goHash, 60));
+}
