@@ -16,7 +16,7 @@
   var SECTION = { top: "첫 화면", apps: "오너 서비스", info: "정보실", quick: "꼭 지킬 규칙", rules: "전체 규칙", process: "처리 절차", contact: "참여 문의" };
 
   function clean(t, max) {
-    t = (t || "").replace(/[↗→]/g, "").replace(/\s+/g, " ").trim();
+    t = (t || "").replace(/[↗→]/g, "").replace(/\d[\d\- ]{7,}\d/g, "").replace(/\s+/g, " ").trim(); // 전화번호는 빼고 보냅니다
     return t.length > max ? t.slice(0, max) + "…" : t;
   }
   function textOf(el, sel) {
