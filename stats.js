@@ -2,7 +2,7 @@
 // 어느 정보가 많이 쓰이는지 보려고 넣었습니다. 쿠키를 쓰지 않고, 누가 눌렀는지는 남기지 않습니다.
 // 남는 것: 쪽을 연 횟수, 누른 카드·링크·단추의 이름. 검색어·닉네임·연락처는 보내지 않습니다.
 (function () {
-  var CODE = ""; // GoatCounter 가입 때 정한 코드 (예: "tesla-gj"). 비어 있으면 아무것도 하지 않습니다.
+  var CODE = "tesla-gj"; // GoatCounter 가입 때 정한 코드 (예: "tesla-gj"). 비어 있으면 아무것도 하지 않습니다.
   if (!CODE) return;
 
   var s = document.createElement("script");
