@@ -23,12 +23,17 @@
     var n = el && el.querySelector(sel);
     return n ? clean(n.textContent, 30) : "";
   }
+  // 정보실 카드 이름은 위쪽 아이콘에 적힌 짧은 이름을 씁니다 (예: 센터 가격표)
+  function cardName(card) {
+    var tile = card.id && document.querySelector('.info-tiles a[data-open="' + card.id + '"]');
+    return (tile && textOf(tile, "strong")) || textOf(card, "summary b, summary strong") || card.id;
+  }
   // 누른 것이 어느 구역에 있는지
   function where(el) {
     var d = el.closest("dialog");
     if (d) return textOf(d, "h2, h3") || "상세 창";
     var card = el.closest("details.info-card");
-    if (card) return textOf(card, "summary strong") || card.id;
+    if (card) return cardName(card);
     var svc = el.closest(".svc");
     if (svc) return "오너 서비스";
     var sec = el.closest("section[id]");
@@ -74,7 +79,8 @@
   document.addEventListener("toggle", function (e) {
     var d = e.target;
     if (!d || d.tagName !== "DETAILS" || !d.open) return;
-    var name = textOf(d, "summary strong") || textOf(d, "summary") || d.id || "이름 없음";
-    send("펼침", d, name);
+    var isCard = d.classList.contains("info-card");
+    var name = isCard ? cardName(d) : (textOf(d, "summary b, summary strong") || textOf(d, "summary") || d.id || "이름 없음");
+    send("펼침", isCard ? (d.parentElement || d) : (d.parentElement || d), name);
   }, true);
 })();
